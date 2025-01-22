@@ -1,0 +1,46 @@
+com.example.flutter_google_signin.app-lifecycle-viewmodel-2.7.0-0 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\0cd2ccd9eb07d677f636a914f488783a\transformed\lifecycle-viewmodel-2.7.0\res
+com.example.flutter_google_signin.app-jetified-play-services-basement-18.4.0-1 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\1ef414e00a23845ce9faeac191476c63\transformed\jetified-play-services-basement-18.4.0\res
+com.example.flutter_google_signin.app-jetified-startup-runtime-1.1.1-2 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\285680b6d8ebc4eed18b5a89ff42eaad\transformed\jetified-startup-runtime-1.1.1\res
+com.example.flutter_google_signin.app-jetified-firebase-common-21.0.0-3 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\395fcdbb55e22de1751b00a71782dfca\transformed\jetified-firebase-common-21.0.0\res
+com.example.flutter_google_signin.app-jetified-tracing-1.2.0-4 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\433d0222aab2c61b64f19eb1b4ddec02\transformed\jetified-tracing-1.2.0\res
+com.example.flutter_google_signin.app-jetified-play-services-auth-21.0.0-5 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\47906b7caaf6d6cb57f0b8a13f773f26\transformed\jetified-play-services-auth-21.0.0\res
+com.example.flutter_google_signin.app-jetified-credentials-1.2.0-rc01-6 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\4e38b19b9c763350a73e33eaf1a873c2\transformed\jetified-credentials-1.2.0-rc01\res
+com.example.flutter_google_signin.app-jetified-core-1.0.0-7 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\4f1c0de01c0a7945a4cc09ac0ea0c6d3\transformed\jetified-core-1.0.0\res
+com.example.flutter_google_signin.app-lifecycle-runtime-2.7.0-8 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\506c7c274ebe5d42282cea1bea9f6bc1\transformed\lifecycle-runtime-2.7.0\res
+com.example.flutter_google_signin.app-localbroadcastmanager-1.1.0-9 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\5685f4bf5f8fc58c292aeb7579688174\transformed\localbroadcastmanager-1.1.0\res
+com.example.flutter_google_signin.app-jetified-annotation-experimental-1.4.0-10 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\5c98ddff5e79af11538ec3b7468f331c\transformed\jetified-annotation-experimental-1.4.0\res
+com.example.flutter_google_signin.app-jetified-savedstate-1.2.1-11 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\72a8c0e34ca24ab173c490a9cd47762e\transformed\jetified-savedstate-1.2.1\res
+com.example.flutter_google_signin.app-jetified-lifecycle-process-2.7.0-12 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\8872ca32048903e43460dc83c55091f7\transformed\jetified-lifecycle-process-2.7.0\res
+com.example.flutter_google_signin.app-jetified-core-common-2.0.3-13 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\949390c21867fbcd1e77158505ddb1d7\transformed\jetified-core-common-2.0.3\res
+com.example.flutter_google_signin.app-jetified-profileinstaller-1.3.1-14 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\9afd2bdd34fe6547c2b5ad430893217a\transformed\jetified-profileinstaller-1.3.1\res
+com.example.flutter_google_signin.app-lifecycle-livedata-core-2.7.0-15 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\9c446520d8b577acc2b22f3c015a775a\transformed\lifecycle-livedata-core-2.7.0\res
+com.example.flutter_google_signin.app-jetified-activity-1.8.1-16 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\a24e79e2531bb19f19eb6687b921d6ac\transformed\jetified-activity-1.8.1\res
+com.example.flutter_google_signin.app-jetified-core-ktx-1.13.1-17 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\a99930add13dc23ec6e67583c168bc13\transformed\jetified-core-ktx-1.13.1\res
+com.example.flutter_google_signin.app-core-1.13.1-18 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\ae70853751a9dd5d9861c04ee54d1d28\transformed\core-1.13.1\res
+com.example.flutter_google_signin.app-core-runtime-2.2.0-19 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\afb501a32f5e9a0b4ee76df4eef34a74\transformed\core-runtime-2.2.0\res
+com.example.flutter_google_signin.app-browser-1.4.0-20 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\b93c99d6d906c41247832e8685749b58\transformed\browser-1.4.0\res
+com.example.flutter_google_signin.app-jetified-window-1.2.0-21 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\d1112fb1c61417620556c0f71b3750cc\transformed\jetified-window-1.2.0\res
+com.example.flutter_google_signin.app-media-1.1.0-22 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\d46e615882ad0e51f47a20df3f094938\transformed\media-1.1.0\res
+com.example.flutter_google_signin.app-jetified-play-services-base-18.0.1-23 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\dc6bb34d9d56a69ec63dc47475431a03\transformed\jetified-play-services-base-18.0.1\res
+com.example.flutter_google_signin.app-fragment-1.7.1-24 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\e1085290b19d197dfa60d2fceb35b43d\transformed\fragment-1.7.1\res
+com.example.flutter_google_signin.app-jetified-firebase-messaging-24.1.0-25 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\e858a2926ef352d8d8d0cc3e86086544\transformed\jetified-firebase-messaging-24.1.0\res
+com.example.flutter_google_signin.app-jetified-window-java-1.2.0-26 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\efde76ec1838af7c670dd49272c03a17\transformed\jetified-window-java-1.2.0\res
+com.example.flutter_google_signin.app-jetified-lifecycle-viewmodel-savedstate-2.7.0-27 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\f8431ca1290fa464e6e20442160e66b2\transformed\jetified-lifecycle-viewmodel-savedstate-2.7.0\res
+com.example.flutter_google_signin.app-jetified-credentials-play-services-auth-1.2.0-rc01-28 C:\Users\iam_fikriandi\.gradle\caches\transforms-3\fee251e11ca0af53ec7e03f6bb800dfd\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\res
+com.example.flutter_google_signin.app-packaged_res-29 C:\Users\iam_fikriandi\AppData\Local\Pub\Cache\hosted\pub.dev\cloud_firestore-5.6.1\android\build\intermediates\packaged_res\debug
+com.example.flutter_google_signin.app-packaged_res-30 C:\Users\iam_fikriandi\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_auth-5.4.0\android\build\intermediates\packaged_res\debug
+com.example.flutter_google_signin.app-packaged_res-31 C:\Users\iam_fikriandi\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_core-3.10.0\android\build\intermediates\packaged_res\debug
+com.example.flutter_google_signin.app-packaged_res-32 C:\Users\iam_fikriandi\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-15.2.0\android\build\intermediates\packaged_res\debug
+com.example.flutter_google_signin.app-packaged_res-33 C:\Users\iam_fikriandi\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_local_notifications-18.0.1\android\build\intermediates\packaged_res\debug
+com.example.flutter_google_signin.app-packaged_res-34 C:\Users\iam_fikriandi\AppData\Local\Pub\Cache\hosted\pub.dev\google_sign_in_android-6.1.34\android\build\intermediates\packaged_res\debug
+com.example.flutter_google_signin.app-packaged_res-35 C:\Users\iam_fikriandi\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_android-2.2.15\android\build\intermediates\packaged_res\debug
+com.example.flutter_google_signin.app-packaged_res-36 C:\Users\iam_fikriandi\AppData\Local\Pub\Cache\hosted\pub.dev\permission_handler_android-12.0.13\android\build\intermediates\packaged_res\debug
+com.example.flutter_google_signin.app-packaged_res-37 C:\Users\iam_fikriandi\AppData\Local\Pub\Cache\hosted\pub.dev\sqflite_android-2.4.0\android\build\intermediates\packaged_res\debug
+com.example.flutter_google_signin.app-google-services-38 C:\andro studio project\projectfirebase\android\app\build\generated\res\google-services\debug
+com.example.flutter_google_signin.app-pngs-39 C:\andro studio project\projectfirebase\android\app\build\generated\res\pngs\debug
+com.example.flutter_google_signin.app-resValues-40 C:\andro studio project\projectfirebase\android\app\build\generated\res\resValues\debug
+com.example.flutter_google_signin.app-packageDebugResources-41 C:\andro studio project\projectfirebase\android\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.flutter_google_signin.app-packageDebugResources-42 C:\andro studio project\projectfirebase\android\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.flutter_google_signin.app-merged_res-43 C:\andro studio project\projectfirebase\android\app\build\intermediates\merged_res\debug
+com.example.flutter_google_signin.app-debug-44 C:\andro studio project\projectfirebase\android\app\src\debug\res
+com.example.flutter_google_signin.app-main-45 C:\andro studio project\projectfirebase\android\app\src\main\res
