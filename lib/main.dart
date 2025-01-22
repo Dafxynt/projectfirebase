@@ -11,6 +11,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(); // Initialize Firebase
   await NotificationService.initialize(); // Initialize NotificationService
+  WidgetsFlutterBinding.ensureInitialized(); // Inisialisasi untuk Sqflite
 
   runApp(MyApp());
 }
