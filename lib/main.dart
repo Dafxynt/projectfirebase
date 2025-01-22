@@ -18,8 +18,13 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized(); // Inisialisasi untuk Sqflite
   await Firebase.initializeApp(); // Initialize Firebase
   await NotificationService.initialize(); // Initialize NotificationService
+ feat/push_notification
   await NotificationService.getToken(); // Get FCM token
   requestNotificationPermission(); // Request notification permission
+
+  WidgetsFlutterBinding.ensureInitialized(); // Inisialisasi untuk Sqflite
+
+ main
   runApp(MyApp());
 }
 
