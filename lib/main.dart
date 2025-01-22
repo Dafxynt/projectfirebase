@@ -7,11 +7,19 @@ import 'package:permission_handler/permission_handler.dart'; // Import permissio
 import 'route/route.dart';
 import 'service/notifservice.dart'; // Add import for NotificationService
 
+
+void requestNotificationPermission() async {
+  var status = await Permission.notification.status;
+  if (status.isDenied) {
+    await Permission.notification.request();
+  }
+}
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(); // Initialize Firebase
-  await NotificationService.initialize(); // Initialize NotificationService
-
+  await Firebase.initializeApp();
+  await NotificationService.getToken();
+  requestNotificationPermission(); // Request notification permission
   runApp(MyApp());
 }
 
