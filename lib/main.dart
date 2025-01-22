@@ -7,7 +7,6 @@ import 'package:permission_handler/permission_handler.dart'; // Import permissio
 import 'route/route.dart';
 import 'service/notifservice.dart'; // Add import for NotificationService
 
-
 void requestNotificationPermission() async {
   var status = await Permission.notification.status;
   if (status.isDenied) {
@@ -16,9 +15,10 @@ void requestNotificationPermission() async {
 }
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  await NotificationService.getToken();
+  WidgetsFlutterBinding.ensureInitialized(); // Inisialisasi untuk Sqflite
+  await Firebase.initializeApp(); // Initialize Firebase
+  await NotificationService.initialize(); // Initialize NotificationService
+  await NotificationService.getToken(); // Get FCM token
   requestNotificationPermission(); // Request notification permission
   runApp(MyApp());
 }
