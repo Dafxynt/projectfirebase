@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:permission_handler/permission_handler.dart'; // Import permission_handler
 import 'route/route.dart';
+import 'controllers/logout_controller.dart';
+import 'controllers/login_controller.dart';
 import 'service/notifservice.dart'; // Add import for NotificationService
 
 void requestNotificationPermission() async {
@@ -19,7 +21,8 @@ void main() async {
   await NotificationService.getToken(); // Get FCM token
   requestNotificationPermission(); // Request notification permission
   WidgetsFlutterBinding.ensureInitialized(); // Inisialisasi untuk Sqflite
-
+  Get.put(LogoutController());
+  Get.put(LoginController());
   runApp(MyApp());
 }
 
