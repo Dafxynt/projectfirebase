@@ -9,7 +9,7 @@ class SignupController extends GetxController {
     try {
       await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
-      Get.offAllNamed('/login');  // Ganti ke '/login' untuk pindah ke halaman login
+      Get.offAllNamed('/login');  
     } catch (e) {
       print('Error: $e'); 
     }
