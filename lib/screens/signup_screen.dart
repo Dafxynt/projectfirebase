@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_google_signin/controllers/signup_controller.dart';
 import 'package:get/get.dart';
-import '../controllers/signup_controller.dart';
-import '../service/notifservice.dart';  // Pastikan import NotificationService
+import '../service/notifservice.dart'; // Pastikan import NotificationService
+import '../widgets/custom_text_field.dart';
+import '../widgets/custom_button.dart';
 
 class SignupScreen extends StatelessWidget {
   final SignupController _signupController = Get.find<SignupController>();
@@ -11,9 +13,9 @@ class SignupScreen extends StatelessWidget {
   void _onSignupSuccess() {
     // Memanggil NotificationService dan melewatkan title dan body sebagai string
     NotificationService.showNotificationFromStrings(
-        'Sign Up Success',  // Title
-        'You have successfully signed up!'  // Body
-    );
+        'Sign Up Success', // Title
+        'You have successfully signed up!' // Body
+        );
     Get.offNamed('/login'); // Pindah ke halaman login setelah berhasil
   }
 
@@ -66,82 +68,40 @@ class SignupScreen extends StatelessWidget {
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 40),
-              TextField(
+              CustomTextField(
                 controller: _emailController,
-                decoration: InputDecoration(
-                  labelText: 'Email',
-                  labelStyle: TextStyle(fontSize: 14),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  prefixIcon: Icon(
-                    Icons.email,
-                    size: 20,
-                  ),
-                  contentPadding: EdgeInsets.symmetric(
-                    vertical: 8,
-                    horizontal: 10,
-                  ),
-                ),
+                labelText: 'Email',
+                prefixIcon: Icons.email,
                 keyboardType: TextInputType.emailAddress,
-                style: TextStyle(fontSize: 14),
               ),
               SizedBox(height: 10),
-              TextField(
+              CustomTextField(
                 controller: _passwordController,
-                decoration: InputDecoration(
-                  labelText: 'Password',
-                  labelStyle: TextStyle(fontSize: 14),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  prefixIcon: Icon(
-                    Icons.lock,
-                    size: 20,
-                  ),
-                  contentPadding: EdgeInsets.symmetric(
-                    vertical: 8,
-                    horizontal: 10,
-                  ),
-                ),
-                obscureText: true,
-                style: TextStyle(fontSize: 14),
+                labelText: 'Password',
+                prefixIcon: Icons.lock,
+                isPassword: true,
               ),
               SizedBox(height: 30),
-              SizedBox(
-                width: double.infinity,
-                height: 45,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 163, 29, 29),
-                    foregroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                  ),
-                  onPressed: () async {
-                    if (_validateInputs()) {
-                      try {
-                        // Lakukan signup dan tunggu proses selesai
-                        await _signupController.createUserWithEmailAndPassword(
-                          _emailController.text,
-                          _passwordController.text,
-                        );
+              CustomButton(
+                text: 'Sign Up',
+                onPressed: () async {
+                  if (_validateInputs()) {
+                    try {
+                      await _signupController.createUserWithEmailAndPassword(
+                        _emailController.text,
+                        _passwordController.text,
+                      );
 
-                        // Jika signup berhasil, tampilkan notifikasi dan arahkan ke halaman login
-                        _onSignupSuccess();
-                      } catch (error) {
-                        // Jika ada error, tampilkan snackbar error
-                        Get.snackbar(
-                          'Error',
-                          'Failed to sign up. Please try again.',
-                          snackPosition: SnackPosition.BOTTOM,
-                        );
-                      }
+                      _onSignupSuccess();
+                    } catch (error) {
+                      Get.snackbar(
+                        'Error',
+                        'Failed to sign up. Please try again.',
+                        snackPosition: SnackPosition.BOTTOM,
+                      );
                     }
-                  },
-                  child: Text('Sign Up'),
-                ),
+                  }
+                },
               ),
               SizedBox(height: 20),
               TextButton(

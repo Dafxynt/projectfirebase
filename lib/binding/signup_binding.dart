@@ -1,5 +1,5 @@
+import 'package:flutter_google_signin/controllers/signup_controller.dart';
 import 'package:get/get.dart';
-import '../controllers/signup_controller.dart';
 
   class SignupBinding extends Bindings {
     @override
