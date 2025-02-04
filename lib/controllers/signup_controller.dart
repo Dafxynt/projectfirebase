@@ -11,7 +11,7 @@ class SignupController extends GetxController {
           email: email, password: password);
       Get.offAllNamed('/login');  // Ganti ke '/login' untuk pindah ke halaman login
     } catch (e) {
-      print('Error: $e');
+      print('Error: $e'); 
     }
   }
 }

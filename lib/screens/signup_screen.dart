@@ -1,11 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/signup_controller.dart';
+import '../service/notifservice.dart';  // Pastikan import NotificationService
 
 class SignupScreen extends StatelessWidget {
   final SignupController _signupController = Get.find<SignupController>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+
+  void _onSignupSuccess() {
+    // Memanggil NotificationService dan melewatkan title dan body sebagai string
+    NotificationService.showNotificationFromStrings(
+        'Sign Up Success',  // Title
+        'You have successfully signed up!'  // Body
+    );
+    Get.offNamed('/login'); // Pindah ke halaman login setelah berhasil
+  }
+
+  bool _validateInputs() {
+    // Memeriksa apakah email dan password sudah diisi
+    if (_emailController.text.isEmpty) {
+      Get.snackbar(
+        'Error',
+        'Please enter your email address.',
+        snackPosition: SnackPosition.BOTTOM,
+      );
+      return false;
+    }
+    if (_passwordController.text.isEmpty) {
+      Get.snackbar(
+        'Error',
+        'Please enter your password.',
+        snackPosition: SnackPosition.BOTTOM,
+      );
+      return false;
+    }
+    return true; // Validasi berhasil, input sudah terisi
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +48,9 @@ class SignupScreen extends StatelessWidget {
         iconTheme: IconThemeData(color: Colors.black),
         titleTextStyle: TextStyle(
           color: Colors.black,
-          fontFamily: 'Roboto', // Menggunakan font Roboto
-          fontSize: 20, // Ukuran font diperbesar
-          fontWeight: FontWeight.bold, // Tambahkan jika ingin font lebih tebal
+          fontFamily: 'Roboto',
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
         ),
         elevation: 0,
       ),
@@ -39,7 +70,7 @@ class SignupScreen extends StatelessWidget {
                 controller: _emailController,
                 decoration: InputDecoration(
                   labelText: 'Email',
-                  labelStyle: TextStyle(fontSize: 14), // Ukuran teks label
+                  labelStyle: TextStyle(fontSize: 14),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -53,7 +84,7 @@ class SignupScreen extends StatelessWidget {
                   ),
                 ),
                 keyboardType: TextInputType.emailAddress,
-                style: TextStyle(fontSize: 14), // Ukuran teks input
+                style: TextStyle(fontSize: 14),
               ),
               SizedBox(height: 10),
               TextField(
@@ -88,11 +119,26 @@ class SignupScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
-                  onPressed: () {
-                    _signupController.createUserWithEmailAndPassword(
-                      _emailController.text,
-                      _passwordController.text,
-                    );
+                  onPressed: () async {
+                    if (_validateInputs()) {
+                      try {
+                        // Lakukan signup dan tunggu proses selesai
+                        await _signupController.createUserWithEmailAndPassword(
+                          _emailController.text,
+                          _passwordController.text,
+                        );
+
+                        // Jika signup berhasil, tampilkan notifikasi dan arahkan ke halaman login
+                        _onSignupSuccess();
+                      } catch (error) {
+                        // Jika ada error, tampilkan snackbar error
+                        Get.snackbar(
+                          'Error',
+                          'Failed to sign up. Please try again.',
+                          snackPosition: SnackPosition.BOTTOM,
+                        );
+                      }
+                    }
                   },
                   child: Text('Sign Up'),
                 ),
