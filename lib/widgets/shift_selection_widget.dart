@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'custom_button.dart';
 
 class ShiftSelectionWidget extends StatelessWidget {
   final String shiftName;
@@ -8,13 +9,13 @@ class ShiftSelectionWidget extends StatelessWidget {
   final VoidCallback onKeluarPressed;
 
   const ShiftSelectionWidget({
-    Key? key,
+    super.key,
     required this.shiftName,
     required this.jamMasuk,
     required this.jamKeluar,
     required this.onMasukPressed,
     required this.onKeluarPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -36,15 +37,19 @@ class ShiftSelectionWidget extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              ElevatedButton(
+              CustomButton(
+                text: "Masuk",
                 onPressed: onMasukPressed,
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
-                child: const Text("Masuk"),
+                backgroundColor: Colors.green,
+                width: 100,
+                height: 40,
               ),
-              ElevatedButton(
+              CustomButton(
+                text: "Keluar",
                 onPressed: onKeluarPressed,
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
-                child: const Text("Keluar"),
+                backgroundColor: Colors.red,
+                width: 100,
+                height: 40,
               ),
             ],
           ),

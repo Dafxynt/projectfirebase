@@ -1,50 +1,53 @@
+import 'package:get/get.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
 
-class AbsenController {
+class AbsenController extends GetxController {
+  var absensiHistory = <Map<String, dynamic>>[].obs;
+
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  Future<void> addAbsen({
-    required String type, // "Masuk" atau "Pulang"
-    required String shiftName,
-    required String jamMasuk,
-  }) async {
-    try {
-      await _firestore.collection('absensi').add({
-        'type': type,
-        'shift_name': shiftName,
-        'jam_masuk': jamMasuk,
-        'time': DateTime.now().toIso8601String(),
-      });
-
-      debugPrint("✅ Absen $type berhasil ditambahkan ke Firestore.");
-    } catch (e) {
-      debugPrint("❌ Error saat menambahkan absen: $e");
-    }
+  @override
+  void onInit() {
+    super.onInit();
+    fetchAbsensiHistory();
   }
 
-  Stream<List<Map<String, dynamic>>> getAbsensiHistory() {
-    return _firestore.collection('absensi').orderBy('time', descending: true).snapshots().map((snapshot) {
-      final data = snapshot.docs.map((doc) {
-        return {
-          'id': doc.id,
-          'type': doc['type'],
-          'shift_name': doc['shift_name'],
-          'jam_masuk': doc['jam_masuk'],
-        };
-      }).toList();
+  // Ambil data absensi dari Firestore
+  void fetchAbsensiHistory() async {
+    var snapshot = await _firestore.collection('absensi').orderBy('timestamp', descending: true).get();
+    absensiHistory.assignAll(snapshot.docs.map((doc) {
+      var data = doc.data();
+      return {
+        'id': doc.id,
+        'type': data['type'],
+        'shiftName': data['shiftName'],
+        'jamMasuk': data['jamMasuk'],
+      };
+    }).toList());
+  }
 
-      debugPrint("📢 Data Riwayat: $data"); // Log hasil query
-      return data;
+  // Tambahkan data absensi ke Firestore
+  void addAbsen({required String type, required String shiftName, required String jamMasuk}) async {
+    var timestamp = FieldValue.serverTimestamp();
+
+    var docRef = await _firestore.collection('absensi').add({
+      'type': type,
+      'shiftName': shiftName,
+      'jamMasuk': jamMasuk,
+      'timestamp': timestamp,
+    });
+
+    absensiHistory.insert(0, {
+      'id': docRef.id,
+      'type': type,
+      'shiftName': shiftName,
+      'jamMasuk': jamMasuk,
     });
   }
 
-  Future<void> deleteAbsen(String docId) async {
-    try {
-      await _firestore.collection('absensi').doc(docId).delete();
-      debugPrint("🗑 Data absen berhasil dihapus.");
-    } catch (e) {
-      debugPrint("❌ Error saat menghapus data absen: $e");
-    }
+  // Hapus absensi dari Firestore
+  void deleteAbsen(String id) async {
+    await _firestore.collection('absensi').doc(id).delete();
+    absensiHistory.removeWhere((item) => item['id'] == id);
   }
 }

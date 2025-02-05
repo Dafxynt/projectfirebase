@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_google_signin/screens/absen_screen.dart'; // Import halaman absen_screen.dart
 
 class HomeWidget extends StatelessWidget {
-  const HomeWidget({Key? key}) : super(key: key);
+  const HomeWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

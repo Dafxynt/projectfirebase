@@ -6,6 +6,8 @@ import '../widgets/custom_button.dart';
 import 'login_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     final LogoutController logoutController = Get.find<LogoutController>();
