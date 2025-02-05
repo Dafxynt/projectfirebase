@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ClockWidget extends StatelessWidget {
+  const ClockWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(

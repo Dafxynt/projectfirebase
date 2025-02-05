@@ -3,6 +3,8 @@ import 'package:flutter_google_signin/widgets/home_widget.dart';
 import 'package:flutter_google_signin/screens/profile_screen.dart'; // Tambah Profile Page
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -43,6 +45,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
 // Halaman utama dengan HomeWidget
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(

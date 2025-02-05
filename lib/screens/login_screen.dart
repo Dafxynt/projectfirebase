@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/login_controller.dart';
 import '../auth/google_sign_in.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import '../service/notifservice.dart'; // Add import for NotificationService
 import '../widgets/custom_text_field.dart';
 import '../widgets/custom_button.dart';
@@ -12,6 +11,8 @@ class LoginScreen extends StatelessWidget {
   final GoogleSignInService _googleSignInService = GoogleSignInService();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+
+  LoginScreen({super.key});
 
   void _onLoginSuccess() {
     NotificationService.showNotificationFromStrings(
